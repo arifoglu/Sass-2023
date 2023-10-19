@@ -1,0 +1,55 @@
+@import "reset";
+@import "colors";
+@import "mixins";
+
+
+$myFont : Helvetica,sans-serif;
+$myColor:blue;
+$myFontSize:18px;
+$myWidth:680px;
+
+body{
+    font-family: $myFont;
+    font-size: $myFontSize;
+    color: $myColor;
+}
+#container{
+    width: $myWidth;
+}
+nav{
+    ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    li{
+        display: inline-block;
+    }
+    a{
+        display: block;
+        padding: 6px 12px;
+        text-decoration: none;
+    }
+}
+
+h3{
+    @include important-text;
+}
+
+.button-basic{
+  border: none;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+.button-report{
+    @extend .button-basic;
+    background-color: red;
+}
+.button-submit{
+    @extend .button-report;
+    background-color: green;
+
+}
+
